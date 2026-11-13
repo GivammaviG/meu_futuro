@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final da Raíz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Enfeites Botânicos e Raízes de Fundo (SVG Animado) -->
+    <div class="botanical-bg">
+        <!-- Raiz Superior Esquerda -->
+        <svg class="vine top-left" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="root-path" d="M-10,0 C50,80 120,40 160,120 C190,180 120,230 180,290" stroke="#4A6B4D" stroke-width="4" stroke-linecap="round"/>
+            <path class="root-path delay-1" d="M60,55 C90,110 40,160 80,220" stroke="#6B8E6E" stroke-width="2.5" stroke-linecap="round"/>
+            <path class="leaf" d="M160,120 C175,105 195,110 190,125 C185,140 165,135 160,120 Z" fill="#5D8260"/>
+            <path class="leaf" d="M80,220 C65,210 50,220 60,235 C70,245 85,235 80,220 Z" fill="#4A6B4D"/>
+        </svg>
+
+        <!-- Raiz Inferior Direita -->
+        <svg class="vine bottom-right" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="root-path" d="M310,300 C240,220 180,260 130,170 C90,100 160,60 100,10" stroke="#4A6B4D" stroke-width="4" stroke-linecap="round"/>
+            <path class="root-path delay-2" d="M220,240 C190,180 250,140 210,80" stroke="#6B8E6E" stroke-width="2.5" stroke-linecap="round"/>
+            <path class="leaf" d="M130,170 C110,175 100,160 115,150 C130,140 140,155 130,170 Z" fill="#5D8260"/>
+            <path class="leaf" d="M210,80 C225,70 235,85 220,95 C205,105 195,90 210,80 Z" fill="#4A6B4D"/>
+        </svg>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <span class="subtitle">O Oráculo das Suas Vocações</span>
+            <h1>Final da Raíz</h1>
+            <p>Toda grande árvore começa como uma semente de curiosidade. Escolha os caminhos abaixo e veja o que os galhos do tempo reservam para você.</p>
+        </div>
+        <div class="root-divider">
+            <svg viewBox="0 0 600 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="root-path" d="M0,20 Q150,5 300,20 T600,20" stroke="#4A6B4D" stroke-width="2"/>
+                <circle cx="300" cy="20" r="5" fill="#4A6B4D"/>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <!-- SESSÃO 1: DAQUI A 3 ANOS -->
+        <section class="timeline-card" id="sec-3-anos">
+            <div class="badge">Semente & Broto • Daqui a 3 Anos</div>
+            <h2>As Primeiras Raízes</h2>
+            <p class="section-desc">O momento em que suas afinidades começam a tomar forma concreta no mundo acadêmico e criativo.</p>
+
+            <div class="questions-grid">
+                <div class="question-box">
+                    <label for="q3-faculdade">Que faculdade ou formação você estará cursando?</label>
+                    <select id="q3-faculdade" onchange="revelarFuturo('3anos')">
+                        <option value="">-- Escolha um caminho --</option>
+                        <option value="gamedesign">Design de Games & Narrativa Interativa</option>
+                        <option value="humanas">Filosofia, História ou Geografia</option>
+                        <option value="exatas">Matemática Aplicada ou Ciência da Computação</option>
+                        <option value="artes">Artes Visuais, Letras ou Escrita Criativa</option>
+                    </select>
+                </div>
+
+                <div class="question-box">
+                    <label for="q3-projeto">Qual será seu maior projeto paralelo nas horas vagas?</label>
+                    <select id="q3-projeto" onchange="revelarFuturo('3anos')">
+                        <option value="">-- Escolha um projeto --</option>
+                        <option value="rpg">Mestrar uma campanha épica de RPG com mapas próprios</option>
+                        <option value="livro">Escrever os primeiros capítulos de um livro de fantasia/ficção</option>
+                        <option value="enigma">Criar quebra-cabeças lógicos e ilustrações conceituais</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result-box" id="res-3anos">
+                <span class="leaf-icon">🌱</span>
+                <p>Selecione as opções acima para germinar sua visão de 3 anos...</p>
+            </div>
+        </section>
+
+        <!-- Conector de Raiz entre sessões -->
+        <div class="stem-connector"></div>
+
+        <!-- SESSÃO 2: DAQUI A 10 ANOS -->
+        <section class="timeline-card" id="sec-10-anos">
+            <div class="badge">Tronco & Galhos • Daqui a 10 Anos</div>
+            <h2>A Expansão da Copa</h2>
+            <p class="section-desc">Suas habilidades em lógica, história e arte se entrelaçam em uma carreira única.</p>
+
+            <div class="questions-grid">
+                <div class="question-box">
+                    <label for="q10-carreira">Qual será a sua principal ocupação?</label>
+                    <select id="q10-carreira" onchange="revelarFuturo('10anos')">
+                        <option value="">-- Escolha sua vocação --</option>
+                        <option value="narrative">Narrative Designer & Criador(a) de Mundos (Worldbuilder)</option>
+                        <option value="pesquisa">Pesquisador(a) e Escritor(a) de obras filosóficas/históricas</option>
+                        <option value="indie">Diretor(a) de um estúdio independente de jogos narrativos</option>
+                        <option value="educador">Criador(a) de conteúdo educativo unindo arte, mapas e lógica</option>
+                    </select>
+                </div>
+
+                <div class="question-box">
+                    <label for="q10-lugar">Onde você estará buscando inspiração?</label>
+                    <select id="q10-lugar" onchange="revelarFuturo('10anos')">
+                        <option value="">-- Escolha seu ambiente --</option>
+                        <option value="biblioteca">Em um escritório cheio de livros, mapas antigos e dados de RPG</option>
+                        <option value="viagem">Viajando por lugares históricos para desenhar e mapear culturas</option>
+                        <option value="natureza">Em uma casa tranquila cercada de plantas e silêncio criativo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result-box" id="res-10anos">
+                <span class="leaf-icon">🌿</span>
+                <p>Selecione as opções acima para ver seus galhos crescerem em 10 anos...</p>
+            </div>
+        </section>
+
+        <!-- Conector de Raiz entre sessões -->
+        <div class="stem-connector"></div>
+
+        <!-- SESSÃO 3: DAQUI A 15 ANOS -->
+        <section class="timeline-card" id="sec-15-anos">
+            <div class="badge">Frutos & Legado • Daqui a 15 Anos</div>
+            <h2>O Final da Raíz</h2>
+            <p class="section-desc">A maturidade de quem uniu a exatidão da matemática à profundidade da alma humana.</p>
+
+            <div class="questions-grid">
+                <div class="question-box">
+                    <label for="q15-obra">Qual será a sua obra-prima reconhecida?</label>
+                    <select id="q15-obra" onchange="revelarFuturo('15anos')">
+                        <option value="">-- Escolha seu legado --</option>
+                        <option value="universo">Um universo de RPG/Jogo premiado pela filosofia e geografia impecáveis</option>
+                        <option value="saga">Uma saga literária ilustrada que marcou uma geração de leitores</option>
+                        <option value="sistema">Um sistema inovador que ensina lógica e história através da arte</option>
+                    </select>
+                </div>
+
+                <div class="question-box">
+                    <label for="q15-sentimento">O que você sentirá ao olhar para trás?</label>
+                    <select id="q15-sentimento" onchange="revelarFuturo('15anos')">
+                        <option value="">-- Escolha sua reflexão --</option>
+                        <option value="orgulho">Orgulho por nunca ter escolhido apenas uma paixão, mas unido todas</option>
+                        <option value="paz">Paz por ter construído um mundo próprio onde outras pessoas se encontram</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result-box" id="res-15anos">
+                <span class="leaf-icon">🌳</span>
+                <p>Selecione as opções acima para colher os frutos de 15 anos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cultivado com Escrita, Lógica, Arte e Imaginação • <strong>Final da Raíz</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
